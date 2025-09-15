@@ -1,4 +1,5 @@
-package com.example.fusion_fiesta_application_new
+package com.fusionfiesta.app
+
 
 import io.flutter.embedding.android.FlutterActivity
 

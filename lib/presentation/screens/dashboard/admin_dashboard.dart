@@ -45,10 +45,10 @@ class _AdminDashboardState extends State<AdminDashboard> {
   
   Future<void> _loadDashboardData({bool silent = false}) async {
     if (!silent) {
-      setState(() {
-        _isLoading = true;
-        _errorMessage = null;
-      });
+    setState(() {
+      _isLoading = true;
+      _errorMessage = null;
+    });
     }
     
     try {
@@ -772,9 +772,9 @@ class _AdminDashboardState extends State<AdminDashboard> {
             children: [
               Icon(Icons.category, size: 16, color: Colors.grey[600]),
               const SizedBox(width: 4),
-              Text(
+          Text(
                 event.categoryDisplayName,
-                style: Theme.of(context).textTheme.bodySmall?.copyWith(
+            style: Theme.of(context).textTheme.bodySmall?.copyWith(
                   color: Colors.grey[600],
                 ),
               ),
@@ -810,9 +810,9 @@ class _AdminDashboardState extends State<AdminDashboard> {
             children: [
               Icon(Icons.schedule, size: 16, color: Colors.grey[600]),
               const SizedBox(width: 4),
-              Text(
+          Text(
                 '${event.startDate.day}/${event.startDate.month}/${event.startDate.year} ${event.startDate.hour.toString().padLeft(2, '0')}:${event.startDate.minute.toString().padLeft(2, '0')}',
-                style: Theme.of(context).textTheme.bodySmall?.copyWith(
+            style: Theme.of(context).textTheme.bodySmall?.copyWith(
                   color: Colors.grey[600],
                 ),
               ),
@@ -977,7 +977,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
       await dashboardService.approveEvent(event.id);
       
       // Remove from pending events list
-      setState(() {
+    setState(() {
         _pendingEvents.removeWhere((e) => e.id == event.id);
       });
       
@@ -985,13 +985,13 @@ class _AdminDashboardState extends State<AdminDashboard> {
       _loadDashboardData(silent: true);
       
       if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text('Event "${event.title}" approved successfully'),
-            backgroundColor: Colors.green,
-          ),
-        );
-      }
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text('Event "${event.title}" approved successfully'),
+        backgroundColor: Colors.green,
+      ),
+    );
+  }
     } catch (e) {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
@@ -1018,9 +1018,9 @@ class _AdminDashboardState extends State<AdminDashboard> {
       _loadDashboardData(silent: true);
       
       if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text('Event "${event.title}" rejected'),
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text('Event "${event.title}" rejected'),
             backgroundColor: Colors.orange,
           ),
         );
@@ -1030,9 +1030,9 @@ class _AdminDashboardState extends State<AdminDashboard> {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text('Failed to reject event: $e'),
-            backgroundColor: Colors.red,
-          ),
-        );
+        backgroundColor: Colors.red,
+      ),
+    );
       }
     }
   }
@@ -1063,7 +1063,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
       ),
     );
   }
-
+  
   void _showRejectConfirmation(PendingEvent event) {
     showDialog(
       context: context,

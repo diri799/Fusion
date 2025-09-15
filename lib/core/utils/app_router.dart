@@ -14,6 +14,7 @@ import '../../presentation/screens/events/event_list_screen.dart';
 import '../../presentation/screens/events/event_detail_screen.dart';
 import '../../presentation/screens/events/create_event_screen.dart';
 import '../../presentation/screens/events/edit_event_screen.dart';
+import '../../presentation/screens/tickets/tickets_screen.dart';
 import '../../presentation/screens/profile/profile_screen.dart';
 import '../../data/models/event.dart';
 import '../../presentation/screens/profile/edit_profile_screen.dart';
@@ -116,6 +117,13 @@ class AppRouter {
                 ),
               ),
             ],
+          ),
+          
+          // Tickets Routes
+          GoRoute(
+            path: '/tickets',
+            name: 'tickets',
+            builder: (context, state) => const TicketsScreen(),
           ),
           
           // Profile Routes
@@ -266,6 +274,7 @@ class AppRoutes {
   static const String eventDetail = '/events/detail';
   static const String createEvent = '/events/create';
   static const String editEvent = '/events/edit';
+  static const String tickets = '/tickets';
   static const String profile = '/profile';
   static const String editProfile = '/profile/edit';
   static const String notifications = '/notifications';
@@ -300,6 +309,7 @@ extension AppNavigationExtension on BuildContext {
   void goToEventDetail(String eventId) => go('${AppRoutes.events}/detail/$eventId');
   void goToCreateEvent() => go('${AppRoutes.events}/create');
   void goToEditEvent(String eventId) => go('${AppRoutes.events}/edit/$eventId');
+  void goToTickets() => go(AppRoutes.tickets);
   void goToFeedback() => go(AppRoutes.feedback);
   
   // Push methods

@@ -60,6 +60,12 @@ class _MainDashboardState extends State<MainDashboard> {
             route: '/events',
           ),
           NavigationItem(
+            icon: Icons.confirmation_number_outlined,
+            activeIcon: Icons.confirmation_number,
+            label: 'Tickets',
+            route: '/tickets',
+          ),
+          NavigationItem(
             icon: Icons.people_outline,
             activeIcon: Icons.people,
             label: 'Users',
@@ -88,6 +94,12 @@ class _MainDashboardState extends State<MainDashboard> {
             route: '/events',
           ),
           NavigationItem(
+            icon: Icons.confirmation_number_outlined,
+            activeIcon: Icons.confirmation_number,
+            label: 'Tickets',
+            route: '/tickets',
+          ),
+          NavigationItem(
             icon: Icons.add_circle_outline,
             activeIcon: Icons.add_circle,
             label: 'Create',
@@ -114,6 +126,12 @@ class _MainDashboardState extends State<MainDashboard> {
             activeIcon: Icons.event,
             label: 'Events',
             route: '/events',
+          ),
+          NavigationItem(
+            icon: Icons.confirmation_number_outlined,
+            activeIcon: Icons.confirmation_number,
+            label: 'Tickets',
+            route: '/tickets',
           ),
           NavigationItem(
             icon: Icons.bookmark_outline,

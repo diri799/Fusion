@@ -1,8 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
-    <application
-        android:label="fusion_fiesta_application_new"
-        android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+
+        <application
+           android:label="Fusion Fiesta"
+           android:name="${applicationName}"
+           android:icon="@mipmap/ic_launcher">
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
