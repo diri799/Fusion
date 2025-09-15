@@ -10,7 +10,7 @@ buildscript {
     }
 }
 
-allprojects {=f
+allprojects {
     repositories {
         google()
         mavenCentral()
